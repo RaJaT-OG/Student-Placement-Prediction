@@ -1,0 +1,105 @@
+{
+  "dataset": "campus_recruitment.csv",
+  "raw_rows": 7225,
+  "labeled_rows_after_dedup": 7182,
+  "duplicate_rows_removed": 43,
+  "missing_target_rows_removed": 0,
+  "feature_count": 10,
+  "numeric_feature_count": 8,
+  "categorical_feature_count": 2,
+  "missing_feature_cells": 0,
+  "features_with_missing_values": [],
+  "all_missing_features_removed": [],
+  "id_columns_excluded": [],
+  "duplicate_feature_rows": 0,
+  "conflicting_duplicate_feature_sets": 3,
+  "conflicting_feature_rows_removed": 6,
+  "strongest_numeric_target_correlations": {
+    "AptitudeTestScore": 0.5260387049996079,
+    "HSC_Marks": 0.5087809598766407,
+    "Projects": 0.4731294776952555,
+    "SSC_Marks": 0.4664086542738216,
+    "CGPA": 0.4235756009663013
+  },
+  "class_counts": {
+    "0": 4189,
+    "1": 2987
+  },
+  "positive_rate": 0.41624860646599776,
+  "target_mapping": {
+    "notplaced": 0,
+    "not placed": 0,
+    "placed": 1
+  },
+  "selected_model": "Logistic Regression",
+  "holdout": {
+    "accuracy": 0.7924791086350975,
+    "balanced_accuracy": 0.7850791420885848,
+    "precision": 0.7559726962457338,
+    "recall": 0.7408026755852842,
+    "f1": 0.7483108108108109,
+    "roc_auc": 0.8718241393347754,
+    "confusion_matrix_labels_0_1": [
+      [
+        695,
+        143
+      ],
+      [
+        155,
+        443
+      ]
+    ],
+    "majority_class_accuracy_baseline": 0.5837979094076655,
+    "validation_rows": 1436,
+    "selected_threshold": 0.5
+  },
+  "cross_validation": [
+    {
+      "Model": "Logistic Regression",
+      "CV_ROC_AUC_mean": 0.8805872044121403,
+      "CV_ROC_AUC_std": 0.011064272477369796
+    },
+    {
+      "Model": "Gradient Boosting",
+      "CV_ROC_AUC_mean": 0.8799509551985712,
+      "CV_ROC_AUC_std": 0.010253641214858337
+    },
+    {
+      "Model": "Extra Trees",
+      "CV_ROC_AUC_mean": 0.8785907681601653,
+      "CV_ROC_AUC_std": 0.009183812158761108
+    },
+    {
+      "Model": "Random Forest",
+      "CV_ROC_AUC_mean": 0.8779224628613634,
+      "CV_ROC_AUC_std": 0.009597365457009987
+    }
+  ],
+  "validation_classification_report": {
+    "Not placed": {
+      "precision": 0.8176470588235294,
+      "recall": 0.8293556085918854,
+      "f1-score": 0.8234597156398105,
+      "support": 838.0
+    },
+    "Placed": {
+      "precision": 0.7559726962457338,
+      "recall": 0.7408026755852842,
+      "f1-score": 0.7483108108108109,
+      "support": 598.0
+    },
+    "accuracy": 0.7924791086350975,
+    "macro avg": {
+      "precision": 0.7868098775346316,
+      "recall": 0.7850791420885848,
+      "f1-score": 0.7858852632253106,
+      "support": 1436.0
+    },
+    "weighted avg": {
+      "precision": 0.7919637239896006,
+      "recall": 0.7924791086350975,
+      "f1-score": 0.7921651159965364,
+      "support": 1436.0
+    }
+  }
+}

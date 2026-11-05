@@ -1,0 +1,3 @@
+dataset,model,accuracy,balanced_accuracy,precision,recall,f1,roc_auc,confusion_matrix_labels_0_1,majority_class_accuracy_baseline,validation_rows,selected_threshold
+student_placement_train.csv,Extra Trees,0.78875,0.49985553447429,0.2,0.012269938650306749,0.023121387283236993,0.48875335882347276,"[[1258, 16], [322, 4]]",0.79625,1600,0.5
+campus_recruitment.csv,Logistic Regression,0.7924791086350975,0.7850791420885848,0.7559726962457338,0.7408026755852842,0.7483108108108109,0.8718241393347754,"[[695, 143], [155, 443]]",0.5837979094076655,1436,0.5

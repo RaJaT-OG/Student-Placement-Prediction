@@ -1,0 +1,78 @@
+
+==============================================================================
+DATASET: student_placement_train.csv
+Rows: 8,000 raw -> 8,000 labeled unique | features: 26 (24 numeric, 2 categorical)
+Target counts: {'0': 6370, '1': 1630} | positive rate: 20.4%
+Missing feature cells: 2,178 | excluded IDs: ['student_id']
+Duplicate feature rows: 0
+
+Three-fold ROC-AUC cross-validation on training partition:
+  Logistic Regression    0.5079 +/- 0.0016
+  Random Forest          0.4953 +/- 0.0111
+  Extra Trees            0.5242 +/- 0.0045
+  Gradient Boosting      0.4842 +/- 0.0014
+
+Selected by 3-fold CV ROC-AUC: Extra Trees
+Untouched 20% validation metrics:
+  accuracy: 0.78875
+  balanced_accuracy: 0.49985553447429
+  precision: 0.2
+  recall: 0.012269938650306749
+  f1: 0.023121387283236993
+  roc_auc: 0.48875335882347276
+  confusion_matrix_labels_0_1: [[1258, 16], [322, 4]]
+  majority_class_accuracy_baseline: 0.79625
+  validation_rows: 1600
+  selected_threshold: 0.5
+
+Classification report at threshold 0.50:
+              precision    recall  f1-score   support
+
+  Not placed       0.80      0.99      0.88      1274
+      Placed       0.20      0.01      0.02       326
+
+    accuracy                           0.79      1600
+   macro avg       0.50      0.50      0.45      1600
+weighted avg       0.67      0.79      0.71      1600
+
+WARNING: ROC-AUC is near chance. This dataset shows no reliable signal; majority-class accuracy is misleading. No deployable model or test predictions were saved.
+
+==============================================================================
+DATASET: campus_recruitment.csv
+Rows: 7,225 raw -> 7,176 labeled unique | features: 10 (8 numeric, 2 categorical)
+Target counts: {'0': 4189, '1': 2987} | positive rate: 41.6%
+Missing feature cells: 0 | excluded IDs: none
+Duplicate feature rows: 0
+
+Three-fold ROC-AUC cross-validation on training partition:
+  Logistic Regression    0.8806 +/- 0.0111
+  Random Forest          0.8779 +/- 0.0096
+  Extra Trees            0.8786 +/- 0.0092
+  Gradient Boosting      0.8800 +/- 0.0103
+
+Selected by 3-fold CV ROC-AUC: Logistic Regression
+Untouched 20% validation metrics:
+  accuracy: 0.7924791086350975
+  balanced_accuracy: 0.7850791420885848
+  precision: 0.7559726962457338
+  recall: 0.7408026755852842
+  f1: 0.7483108108108109
+  roc_auc: 0.8718241393347754
+  confusion_matrix_labels_0_1: [[695, 143], [155, 443]]
+  majority_class_accuracy_baseline: 0.5837979094076655
+  validation_rows: 1436
+  selected_threshold: 0.5
+
+Classification report at threshold 0.50:
+              precision    recall  f1-score   support
+
+  Not placed       0.82      0.83      0.82       838
+      Placed       0.76      0.74      0.75       598
+
+    accuracy                           0.79      1436
+   macro avg       0.79      0.79      0.79      1436
+weighted avg       0.79      0.79      0.79      1436
+
+Strong validation ranking signal: ROC-AUC is at least 0.85.
+
+Saved run summary: C:\Users\user\Documents\Student-Placement-Prediction\outputs\training_summary.csv

@@ -1,0 +1,25 @@
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
+
+# MLflow
+mlruns/
+
+# IDE
+.vscode/
+
+# Environment variables and secrets
+.env
+
+# Temporary files
+*.log
+.DS_Store

@@ -1,0 +1,118 @@
+{
+  "dataset": "student_placement_train.csv",
+  "raw_rows": 8000,
+  "labeled_rows_after_dedup": 8000,
+  "duplicate_rows_removed": 0,
+  "missing_target_rows_removed": 0,
+  "feature_count": 26,
+  "numeric_feature_count": 24,
+  "categorical_feature_count": 2,
+  "missing_feature_cells": 2178,
+  "features_with_missing_values": [
+    "attendance_percentage",
+    "coding_score",
+    "aptitude_score",
+    "communication_score",
+    "technical_score",
+    "internship_months",
+    "linkedin_score",
+    "resume_score",
+    "soft_skills_score",
+    "training_hours",
+    "mock_interview_score"
+  ],
+  "all_missing_features_removed": [],
+  "id_columns_excluded": [
+    "student_id"
+  ],
+  "duplicate_feature_rows": 0,
+  "conflicting_duplicate_feature_sets": 0,
+  "conflicting_feature_rows_removed": 0,
+  "strongest_numeric_target_correlations": {
+    "cgpa": 0.023251022249001507,
+    "aptitude_score": 0.020401703447211074,
+    "mock_interview_score": 0.01850587205284533,
+    "technical_score": 0.018100626181052994,
+    "internships_count": 0.015645744273517122
+  },
+  "class_counts": {
+    "0": 6370,
+    "1": 1630
+  },
+  "positive_rate": 0.20375,
+  "target_mapping": {
+    "0": 0,
+    "1": 1
+  },
+  "selected_model": "Extra Trees",
+  "holdout": {
+    "accuracy": 0.78875,
+    "balanced_accuracy": 0.49985553447429,
+    "precision": 0.2,
+    "recall": 0.012269938650306749,
+    "f1": 0.023121387283236993,
+    "roc_auc": 0.48875335882347276,
+    "confusion_matrix_labels_0_1": [
+      [
+        1258,
+        16
+      ],
+      [
+        322,
+        4
+      ]
+    ],
+    "majority_class_accuracy_baseline": 0.79625,
+    "validation_rows": 1600,
+    "selected_threshold": 0.5
+  },
+  "cross_validation": [
+    {
+      "Model": "Extra Trees",
+      "CV_ROC_AUC_mean": 0.524216857984657,
+      "CV_ROC_AUC_std": 0.004466428779156512
+    },
+    {
+      "Model": "Logistic Regression",
+      "CV_ROC_AUC_mean": 0.5079411875333638,
+      "CV_ROC_AUC_std": 0.0015838005677023485
+    },
+    {
+      "Model": "Random Forest",
+      "CV_ROC_AUC_mean": 0.4953293439029343,
+      "CV_ROC_AUC_std": 0.011058969179884116
+    },
+    {
+      "Model": "Gradient Boosting",
+      "CV_ROC_AUC_mean": 0.48424766523510815,
+      "CV_ROC_AUC_std": 0.0013639213430028136
+    }
+  ],
+  "validation_classification_report": {
+    "Not placed": {
+      "precision": 0.7962025316455696,
+      "recall": 0.9874411302982732,
+      "f1-score": 0.8815697266993693,
+      "support": 1274.0
+    },
+    "Placed": {
+      "precision": 0.2,
+      "recall": 0.012269938650306749,
+      "f1-score": 0.023121387283236993,
+      "support": 326.0
+    },
+    "accuracy": 0.78875,
+    "macro avg": {
+      "precision": 0.4981012658227848,
+      "recall": 0.49985553447429,
+      "f1-score": 0.45234555699130313,
+      "support": 1600.0
+    },
+    "weighted avg": {
+      "precision": 0.6747262658227848,
+      "recall": 0.78875,
+      "f1-score": 0.7066608775433323,
+      "support": 1600.0
+    }
+  }
+}
